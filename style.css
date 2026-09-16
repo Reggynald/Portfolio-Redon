@@ -1,3 +1,9 @@
+/* =========================================================
+   Portfolio – Stylesheet
+   Farben & Typografie über CSS-Variablen, damit du Design
+   und Dark Mode zentral an einer Stelle anpassen kannst.
+   ========================================================= */
+
 /* ---------- Design-Tokens: Light (Standard) ---------- */
 :root {
   --bg: #f6f7f9;
@@ -350,3 +356,19 @@ section + section { border-top: 1px solid var(--line); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Erfahrungs-Bereiche (Ausbildung) ---------- */
+.areas {
+  display: grid;
+  gap: 1.6rem 2.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.75rem;
+}
+@media (min-width: 720px) { .areas { grid-template-columns: 1fr 1fr; } }
+.area h3 {
+  font-size: 1.1rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.area p { color: var(--muted); margin: 0; max-width: 60ch; }
