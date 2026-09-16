@@ -7,10 +7,10 @@
 /* ---------- Design-Tokens: Light (Standard) ---------- */
 :root {
   --bg: #f6f7f9;
-  --surface: #ffffff;
+  --surface: #e7e7e7;
   --ink: #1b2430;        /* Haupttext (Navy statt Schwarz) */
   --muted: #5b6675;      /* Sekundärtext */
-  --line: #e2e6ec;       /* Rahmen / Trennlinien */
+  --line: #1d2735;       /* Rahmen / Trennlinien */
   --accent: #0e7c7b;     /* Akzent (Petrol) */
   --accent-strong: #0b605f;
   --accent-soft: #e3f1f0;
