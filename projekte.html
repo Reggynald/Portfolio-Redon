@@ -65,7 +65,105 @@
           <ul class="tags">
             <li>C#</li><li>.NET / WinForms</li><li>PHP</li><li>MySQL</li><li>HTML/CSS</li>
           </ul>
-          <!-- Tipp: Wenn du magst, hier Links auf GitHub-Repo oder Screenshots ergänzen. -->
+          
+          <!-- Bildergalerie zum Kundenportal – zum Durchscrollen/Wischen -->
+<style>
+  .pf-gallery { margin-top: 1.25rem; }
+  .pf-track {
+    display: flex; gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+  .pf-track img {
+    flex: 0 0 100%;
+    width: 100%; height: auto; max-height: 70vh;
+    object-fit: contain;
+    scroll-snap-align: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  .pf-controls {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+  .pf-count { color: var(--muted); font-size: 0.9rem; }
+  .pf-caption {
+    flex: 1;
+    text-align: center;
+    color: var(--ink);
+    font-weight: 500;
+    padding: 0 0.5rem;
+  }
+  .pf-btn {
+    width: 42px; height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer; font-size: 1.3rem; line-height: 1;
+  }
+  .pf-btn:hover { border-color: var(--accent); color: var(--accent-strong); }
+</style>
+
+<div class="pf-gallery">
+  <div class="pf-track" id="galerieKundenportal">
+    <img src="bilder/login.png" alt="Kundenportal – Login-Seite" />
+    <img src="bilder/login-falsche-daten.png" alt="Kundenportal – Login mit falscher Eingabe" />
+    <img src="bilder/dashboard.png" alt="Kundenportal – Dashboard" />
+    <img src="bilder/download-fehlermeldung-a.png" alt="Kundenportal – Fehlermeldung beim Download" />
+    <img src="bilder/download-fehlermeldung-b.png" alt="Kundenportal – Fehlermeldung beim Download (2)" />
+    <img src="bilder/verwaltungsanwendung-hauptseite.png" alt="Verwaltungsanwendung – Hauptseite" />
+    <img src="bilder/verwaltungsanwendung-hauptseite-im-editier-modus.png" alt="Verwaltungsanwendung – Hauptseite im Editier-Modus" />
+    <img src="bilder/verwaltungsanwendung-motorenseite.png" alt="Verwaltungsanwendung – Motorenseite" />
+  </div>
+  <div class="pf-controls">
+    <span class="pf-count" id="countKundenportal">1 / 8</span>
+    <span class="pf-caption" id="captionKundenportal"></span>
+    <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="-1" aria-label="Vorheriges Bild">‹</button>
+    <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="1" aria-label="Nächstes Bild">›</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var track = document.getElementById("galerieKundenportal");
+    var count = document.getElementById("countKundenportal");
+    var caption = document.getElementById("captionKundenportal");
+    if (!track) return;
+
+    // Bildunterschriften in gleicher Reihenfolge wie die Bilder oben:
+    var captions = [
+      "Login-Seite",
+      "Login – falsche Daten",
+      "Dashboard",
+      "Download-Fehlermeldung",
+      "Download-Fehlermeldung (2)",
+      "Verwaltungsanwendung – Hauptseite",
+      "Verwaltungsanwendung – Editier-Modus",
+      "Verwaltungsanwendung – Motorenseite"
+    ];
+    var total = track.querySelectorAll("img").length;
+
+    function update() {
+      var i = Math.min(Math.max(Math.round(track.scrollLeft / track.clientWidth), 0), total - 1);
+      count.textContent = (i + 1) + " / " + total;
+      caption.textContent = captions[i] || "";
+    }
+
+    document.querySelectorAll('.pf-btn[data-target="galerieKundenportal"]').forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth, behavior: "smooth" });
+      });
+    });
+    track.addEventListener("scroll", update);
+    update(); // gleich beim Laden die erste Beschriftung setzen
+  })();
+</script>
+
         </div>
 
         <!-- Projekt 2: Diese Website -->
