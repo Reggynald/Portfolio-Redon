@@ -7,7 +7,7 @@
 /* ---------- Design-Tokens: Light (Standard) ---------- */
 :root {
   --bg: #f6f7f9;
-  --surface: #e6e6e6;
+  --surface: #e7e7e7;
   --ink: #1b2430;        /* Haupttext (Navy statt Schwarz) */
   --muted: #5b6675;      /* Sekundärtext */
   --line: #1d2735;       /* Rahmen / Trennlinien */
