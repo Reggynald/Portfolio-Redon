@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Projekte – Redon Aliu</title>
-  <meta name="description" content="Ausgewählte Projekte von Redon Aliu: Abschlussprojekt (Kundenportal), Portfolio-Website und mehr." />
+  <meta name="description" content="Ausgewählte Projekte von Redon Aliu: Abschlussprojekt (Kundenportal), Portfolio-Website und Task Tracker." />
   <meta name="author" content="Redon Aliu" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Projekte – Redon Aliu" />
@@ -65,105 +65,104 @@
           <ul class="tags">
             <li>C#</li><li>.NET / WinForms</li><li>PHP</li><li>MySQL</li><li>HTML/CSS</li><li>Responsive Design</li>
           </ul>
-          
+
           <!-- Bildergalerie zum Kundenportal – zum Durchscrollen/Wischen -->
-<style>
-  .pf-gallery { margin-top: 1.25rem; }
-  .pf-track {
-    display: flex; gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
-  }
-  .pf-track img {
-    flex: 0 0 100%;
-    width: 100%; height: auto; max-height: 70vh;
-    object-fit: contain;
-    scroll-snap-align: center;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--surface);
-  }
-  .pf-controls {
-    display: flex; align-items: center; gap: 0.5rem;
-    margin-top: 0.6rem;
-  }
-  .pf-count { color: var(--muted); font-size: 0.9rem; }
-  .pf-caption {
-    flex: 1;
-    text-align: center;
-    color: var(--ink);
-    font-weight: 500;
-    padding: 0 0.5rem;
-  }
-  .pf-btn {
-    width: 42px; height: 42px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--surface);
-    color: var(--ink);
-    cursor: pointer; font-size: 1.3rem; line-height: 1;
-  }
-  .pf-btn:hover { border-color: var(--accent); color: var(--accent-strong); }
-</style>
+          <style>
+            .pf-gallery { margin-top: 1.25rem; }
+            .pf-track {
+              display: flex; gap: 1rem;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+              -webkit-overflow-scrolling: touch;
+              padding-bottom: 0.5rem;
+            }
+            .pf-track img {
+              flex: 0 0 100%;
+              width: 100%; height: auto; max-height: 70vh;
+              object-fit: contain;
+              scroll-snap-align: center;
+              border: 1px solid var(--line);
+              border-radius: 10px;
+              background: var(--surface);
+            }
+            .pf-controls {
+              display: flex; align-items: center; gap: 0.5rem;
+              margin-top: 0.6rem;
+            }
+            .pf-count { color: var(--muted); font-size: 0.9rem; }
+            .pf-caption {
+              flex: 1;
+              text-align: center;
+              color: var(--ink);
+              font-weight: 500;
+              padding: 0 0.5rem;
+            }
+            .pf-btn {
+              width: 42px; height: 42px;
+              border: 1px solid var(--line);
+              border-radius: 8px;
+              background: var(--surface);
+              color: var(--ink);
+              cursor: pointer; font-size: 1.3rem; line-height: 1;
+            }
+            .pf-btn:hover { border-color: var(--accent); color: var(--accent-strong); }
+          </style>
 
-<div class="pf-gallery">
-  <div class="pf-track" id="galerieKundenportal">
-    <img src="bilder/login.png" alt="Kundenportal – Login-Seite" />
-    <img src="bilder/login-falsche-daten.png" alt="Kundenportal – Login mit falscher Eingabe" />
-    <img src="bilder/dashboard.png" alt="Kundenportal – Dashboard" />
-    <img src="bilder/download-fehlermeldung-a.png" alt="Kundenportal – Fehlermeldung beim Download" />
-    <img src="bilder/download-fehlermeldung-b.png" alt="Kundenportal – Fehlermeldung beim Download (2)" />
-    <img src="bilder/verwaltungsanwendung-hauptseite.png" alt="Verwaltungsanwendung – Hauptseite" />
-    <img src="bilder/verwaltungsanwendung-hauptseite-im-editier-modus.png" alt="Verwaltungsanwendung – Hauptseite im Editier-Modus" />
-    <img src="bilder/verwaltungsanwendung-motorenseite.png" alt="Verwaltungsanwendung – Motorenseite" />
-  </div>
-  <div class="pf-controls">
-    <span class="pf-count" id="countKundenportal">1 / 8</span>
-    <span class="pf-caption" id="captionKundenportal"></span>
-    <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="-1" aria-label="Vorheriges Bild">‹</button>
-    <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="1" aria-label="Nächstes Bild">›</button>
-  </div>
-</div>
+          <div class="pf-gallery">
+            <div class="pf-track" id="galerieKundenportal">
+              <img src="bilder/login.png" alt="Kundenportal – Login-Seite" />
+              <img src="bilder/login-falsche-daten.png" alt="Kundenportal – Login mit falscher Eingabe" />
+              <img src="bilder/dashboard.png" alt="Kundenportal – Dashboard" />
+              <img src="bilder/download-fehlermeldung-a.png" alt="Kundenportal – Fehlermeldung beim Download" />
+              <img src="bilder/download-fehlermeldung-b.png" alt="Kundenportal – Fehlermeldung beim Download (2)" />
+              <img src="bilder/verwaltungsanwendung-hauptseite.png" alt="Verwaltungsanwendung – Hauptseite" />
+              <img src="bilder/verwaltungsanwendung-hauptseite-im-editier-modus.png" alt="Verwaltungsanwendung – Hauptseite im Editier-Modus" />
+              <img src="bilder/verwaltungsanwendung-motorenseite.png" alt="Verwaltungsanwendung – Motorenseite" />
+            </div>
+            <div class="pf-controls">
+              <span class="pf-count" id="countKundenportal">1 / 8</span>
+              <span class="pf-caption" id="captionKundenportal"></span>
+              <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="-1" aria-label="Vorheriges Bild">‹</button>
+              <button type="button" class="pf-btn" data-target="galerieKundenportal" data-dir="1" aria-label="Nächstes Bild">›</button>
+            </div>
+          </div>
 
-<script>
-  (function () {
-    var track = document.getElementById("galerieKundenportal");
-    var count = document.getElementById("countKundenportal");
-    var caption = document.getElementById("captionKundenportal");
-    if (!track) return;
+          <script>
+            (function () {
+              var track = document.getElementById("galerieKundenportal");
+              var count = document.getElementById("countKundenportal");
+              var caption = document.getElementById("captionKundenportal");
+              if (!track) return;
 
-    // Bildunterschriften in gleicher Reihenfolge wie die Bilder oben:
-    var captions = [
-      "Login-Seite",
-      "Login – falsche Daten",
-      "Dashboard",
-      "Download-Fehlermeldung",
-      "Download-Fehlermeldung (2)",
-      "Verwaltungsanwendung – Hauptseite",
-      "Verwaltungsanwendung – Editier-Modus",
-      "Verwaltungsanwendung – Motorenseite"
-    ];
-    var total = track.querySelectorAll("img").length;
+              // Bildunterschriften in gleicher Reihenfolge wie die Bilder oben:
+              var captions = [
+                "Login-Seite",
+                "Login – falsche Daten",
+                "Dashboard",
+                "Download-Fehlermeldung",
+                "Download-Fehlermeldung (2)",
+                "Verwaltungsanwendung – Hauptseite",
+                "Verwaltungsanwendung – Editier-Modus",
+                "Verwaltungsanwendung – Motorenseite"
+              ];
+              var total = track.querySelectorAll("img").length;
 
-    function update() {
-      var i = Math.min(Math.max(Math.round(track.scrollLeft / track.clientWidth), 0), total - 1);
-      count.textContent = (i + 1) + " / " + total;
-      caption.textContent = captions[i] || "";
-    }
+              function update() {
+                var i = Math.min(Math.max(Math.round(track.scrollLeft / track.clientWidth), 0), total - 1);
+                count.textContent = (i + 1) + " / " + total;
+                caption.textContent = captions[i] || "";
+              }
 
-    document.querySelectorAll('.pf-btn[data-target="galerieKundenportal"]').forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth, behavior: "smooth" });
-      });
-    });
-    track.addEventListener("scroll", update);
-    update(); // gleich beim Laden die erste Beschriftung setzen
-  })();
-</script>
-
+              document.querySelectorAll('.pf-btn[data-target="galerieKundenportal"]').forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth, behavior: "smooth" });
+                });
+              });
+              track.addEventListener("scroll", update);
+              update(); // gleich beim Laden die erste Beschriftung setzen
+            })();
+          </script>
         </div>
 
         <!-- Projekt 2: Diese Website -->
@@ -179,25 +178,33 @@
             <li>HTML</li><li>CSS</li><li>Responsive Design</li><li>JavaScript</li>
           </ul>
           <div class="project-links">
-            <!-- Ersetze # durch deine GitHub-URL, sobald das Repo online ist -->
+            <!-- Optional: Link auf dein Portfolio-Repo, z. B.:
+            <a href="https://github.com/reggynald/Portfolio-Redon" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+            -->
           </div>
         </div>
 
-        <!-- Projekt 3: Platzhalter zum Ausfüllen 
+        <!-- Projekt 3: Task Tracker -->
         <div class="project">
-          <h3>nächstes Projekt</h3>
-          <p class="project-role">Platzhalter</p>
+          <h3>Task Tracker</h3>
+          <p class="project-role">Eigenes Übungsprojekt · 2026</p>
           <p>
-            Kurze Beschreibung: Worum ging es, welche Aufgabe wurden gelöst und
-            was war dein Beitrag? Zwei bis drei Sätze reichen völlig.
+            Eine interaktive To-do-App mit JavaScript: Aufgaben lassen sich
+            hinzufügen, bearbeiten, als erledigt markieren und löschen. Die Daten
+            werden im Browser (localStorage) gespeichert und bleiben so auch nach
+            dem Neuladen der Seite erhalten.
           </p>
           <ul class="tags">
-            <li>Technologie 1</li><li>Technologie 2</li>
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li>
           </ul>
+          <div class="project-links">
+            <a href="https://reggynald.github.io/Task-Tracker/" target="_blank" rel="noopener">Live ansehen</a>
+            <a href="https://github.com/reggynald/Task-Tracker" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+          </div>
         </div>
+
       </div>
     </section>
-    -->
   </main>
 
   <footer class="site-footer">
@@ -205,7 +212,7 @@
       <p>© 2026 Redon Aliu</p>
       <nav aria-label="Fußzeile">
         <a href="index.html">Start</a>
-        <a href="projekte.html">Projekte</a>
+        <a href="projekte.html" class="is-active">Projekte</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
     </div>
