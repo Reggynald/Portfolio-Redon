@@ -201,43 +201,67 @@
           </div>
         </div>
 
-        <!-- Projekt 4: Roll the Dice -->
+        <!-- Projekt: Würfelspiele in C# (Weiterentwicklung) -->
         <div class="project">
-          <h3>Roll the Dice</h3>
-          <p class="project-role">Eigenes Übungsprojekt · 2026</p>
+          <h3>Würfelspiele in C# – vom Grundgerüst zur erweiterbaren Version</h3>
+          <p class="project-role">Eigene Übungsprojekte · 2026</p>
           <p>
-            Ein Konsolenspiel in C#: Über 10 Runden tritt man gegen einen
-            computergesteuerten Gegner an. Pro Runde würfeln beide einen sechsseitigen
-            Würfel – wer höher würfelt, gewinnt die Runde und einen Punkt. Nach 10 Runden
-            gewinnt, wer die meisten Punkte hat.
+            Zwei aufeinander aufbauende Konsolenspiele in C#. Begonnen mit einem einfachen
+            Würfelspiel, das ich anschließend zu einer deutlich umfangreicheren Version mit
+            Power-ups und einer sauber erweiterbaren Architektur ausgebaut habe.
           </p>
-          <p>
-            Umgesetzt mit einer sauberen, objektorientierten Struktur (eigene Klassen für
-            Würfel, Spieler, Spiel und Anzeige), ASCII-Würfeln, einer kurzen
-            Würfel-Animation und farbiger Konsolenausgabe.
-          </p>
-          <ul class="tags">
-            <li>C#</li><li>.NET</li><li>Konsolenanwendung</li><li>OOP</li>
-          </ul>
 
           <style>
-            .rtd-figure { margin: 1.25rem 0 0; }
+            .stage { border-left: 3px solid var(--accent); padding-left: 1rem; margin-top: 1.25rem; }
+            .stage h4 { font-size: 1.05rem; margin: 0 0 0.3rem; font-family: var(--font-head); }
+            .stage-badge {
+              font-size: 0.75rem; color: var(--accent-strong); background: var(--accent-soft);
+              border-radius: 999px; padding: 0.1rem 0.6rem; margin-left: 0.4rem; vertical-align: middle;
+            }
+            .rtd-figure { margin: 1rem 0 0; }
             .rtd-figure img {
               width: 100%; max-width: 640px; height: auto;
-              border: 1px solid var(--line);
-              border-radius: 10px;
-              background: var(--surface);
+              border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
             }
             .rtd-figure figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
           </style>
-          <figure class="rtd-figure">
-            <img src="https://raw.githubusercontent.com/Reggynald/Roll-the-Dice/master/rtd-demo.gif" alt="Roll the Dice – Demo des Konsolenspiels" />
-            <figcaption>Kurze Demo des Spiels</figcaption>
-          </figure>
 
-          <div class="project-links">
-            <a href="https://github.com/Reggynald/Roll-the-Dice" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+          <div class="stage">
+            <h4>1 · Roll the Dice</h4>
+            <p>
+              Der Einstieg: Über 10 Runden gegen den Computer würfeln – wer höher würfelt,
+              gewinnt die Runde. Mit ASCII-Würfeln, kurzer Animation und
+              objektorientiertem Aufbau.
+            </p>
+            <figure class="rtd-figure">
+              <img src="https://raw.githubusercontent.com/Reggynald/Roll-The-Dice/master/rtd-demo.gif" alt="Roll the Dice – Demo des Konsolenspiels" />
+              <figcaption>Demo der ersten Version</figcaption>
+            </figure>
+            <div class="project-links">
+              <a href="https://github.com/Reggynald/Roll-the-Dice" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+            </div>
           </div>
+
+          <div class="stage">
+            <h4>2 · Roll the Dice: Race <span class="stage-badge">Weiterentwicklung</span></h4>
+            <p>
+              Der Ausbau: ein Wettrennen auf ein Zielergebnis, zwei Spielmodi und fünf
+              Power-ups mit eigener Animation. Technischer Fokus auf Erweiterbarkeit – die
+              Power-ups basieren auf einer gemeinsamen Schnittstelle (<code>IPowerUp</code>),
+              sodass sich neue ergänzen lassen, ohne bestehenden Code zu ändern.
+            </p>
+            <figure class="rtd-figure">
+              <img src="https://raw.githubusercontent.com/Reggynald/RollTheDiceRace/master/rtdrace-demo.gif" alt="Roll the Dice: Race – Demo des Konsolenspiels" />
+              <figcaption>Demo der erweiterten Version</figcaption>
+            </figure>
+            <div class="project-links">
+              <a href="https://github.com/Reggynald/RollTheDiceRace" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+            </div>
+          </div>
+
+          <ul class="tags">
+            <li>C#</li><li>.NET</li><li>Konsolenanwendung</li><li>OOP</li><li>Interfaces</li>
+          </ul>
         </div>
 
       </div>
