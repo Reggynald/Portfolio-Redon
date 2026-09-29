@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects – Redon Aliu</title>
+  <meta name="description" content="Selected projects by Redon Aliu: final apprenticeship project (customer portal), portfolio website, games and more." />
+  <meta name="author" content="Redon Aliu" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Projects – Redon Aliu" />
+  <meta property="og:description" content="Selected software projects with C#/.NET and web technologies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0e7c7b" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index-en.html">Redon<span>.</span></a>
+        <ul class="nav-links" id="primary-nav">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="projekte-en.html" class="is-active" aria-current="page">Projects</a></li>
+          <li><a href="kontakt-en.html">Contact</a></li>
+        </ul>
+        <div class="nav-tools">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+          <a class="icon-btn lang-btn" href="index.html" style="font-size:0.8rem;font-weight:600;text-decoration:none;" aria-label="Zur deutschen Version wechseln">DE</a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+        <h1 class="section-title">Projects</h1>
+        <p class="lead">A selection of work from my apprenticeship and my own learning.</p>
+
+        <!-- Project: Final apprenticeship project -->
+        <div class="project">
+          <h3>Web-based customer portal for motor configuration files</h3>
+          <p class="project-role">Final apprenticeship project · AFOTEK GmbH · 2026</p>
+          <p>
+            The goal was a portal that lets customers retrieve configuration files
+            for motors. I built a web-based interface with PHP and MySQL for
+            customer access, plus a C# WinForms application used to manage and
+            provide the data internally.
+          </p>
+          <p>
+            Focus areas: data modelling in MySQL, connecting the web and desktop
+            parts to the same data source, and a clear interface for internal use.
+          </p>
+          <ul class="tags">
+            <li>C#</li><li>.NET / WinForms</li><li>PHP</li><li>MySQL</li><li>HTML/CSS</li><li>Responsive Design</li>
+          </ul>
+
+          <!-- Image gallery – scroll / swipe through -->
+          <style>
+            .pf-gallery { margin-top: 1.25rem; }
+            .pf-track {
+              display: flex; gap: 1rem;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+              -webkit-overflow-scrolling: touch;
+              padding-bottom: 0.5rem;
+            }
+            .pf-track img {
+              flex: 0 0 100%;
+              width: 100%; height: auto; max-height: 70vh;
+              object-fit: contain;
+              scroll-snap-align: center;
+              border: 1px solid var(--line);
+              border-radius: 10px;
+              background: var(--surface);
+            }
+            .pf-controls {
+              display: flex; align-items: center; gap: 0.5rem;
+              margin-top: 0.6rem;
+            }
+            .pf-count { color: var(--muted); font-size: 0.9rem; }
+            .pf-caption {
+              flex: 1;
+              text-align: center;
+              color: var(--ink);
+              font-weight: 500;
+              padding: 0 0.5rem;
+            }
+            .pf-btn {
+              width: 42px; height: 42px;
+              border: 1px solid var(--line);
+              border-radius: 8px;
+              background: var(--surface);
+              color: var(--ink);
+              cursor: pointer; font-size: 1.3rem; line-height: 1;
+            }
+            .pf-btn:hover { border-color: var(--accent); color: var(--accent-strong); }
+          </style>
+
+          <div class="pf-gallery">
+            <div class="pf-track" id="galleryPortal">
+              <img src="bilder/login.png" alt="Customer portal – login page" />
+              <img src="bilder/login-falsche-daten.png" alt="Customer portal – login with wrong credentials" />
+              <img src="bilder/dashboard.png" alt="Customer portal – dashboard" />
+              <img src="bilder/download-fehlermeldung-a.png" alt="Customer portal – download error message" />
+              <img src="bilder/download-fehlermeldung-b.png" alt="Customer portal – download error message (2)" />
+              <img src="bilder/verwaltungsanwendung-hauptseite.png" alt="Management application – main page" />
+              <img src="bilder/verwaltungsanwendung-hauptseite-im-editier-modus.png" alt="Management application – main page in edit mode" />
+              <img src="bilder/verwaltungsanwendung-motorenseite.png" alt="Management application – motors page" />
+            </div>
+            <div class="pf-controls">
+              <span class="pf-count" id="countPortal">1 / 8</span>
+              <span class="pf-caption" id="captionPortal"></span>
+              <button type="button" class="pf-btn" data-target="galleryPortal" data-dir="-1" aria-label="Previous image">‹</button>
+              <button type="button" class="pf-btn" data-target="galleryPortal" data-dir="1" aria-label="Next image">›</button>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var track = document.getElementById("galleryPortal");
+              var count = document.getElementById("countPortal");
+              var caption = document.getElementById("captionPortal");
+              if (!track) return;
+
+              var captions = [
+                "Login page",
+                "Login – wrong credentials",
+                "Dashboard",
+                "Download error message",
+                "Download error message (2)",
+                "Management application – main page",
+                "Management application – edit mode",
+                "Management application – motors page"
+              ];
+              var total = track.querySelectorAll("img").length;
+
+              function update() {
+                var i = Math.min(Math.max(Math.round(track.scrollLeft / track.clientWidth), 0), total - 1);
+                count.textContent = (i + 1) + " / " + total;
+                caption.textContent = captions[i] || "";
+              }
+
+              document.querySelectorAll('.pf-btn[data-target="galleryPortal"]').forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth, behavior: "smooth" });
+                });
+              });
+              track.addEventListener("scroll", update);
+              update();
+            })();
+          </script>
+        </div>
+
+        <!-- Project: Tetris (WPF) -->
+        <div class="project">
+          <h3>Tetris</h3>
+          <p class="project-role">Personal project · 2026</p>
+          <p>
+            A classic Tetris clone for Windows – my first graphical desktop app
+            with C# and WPF (XAML) on .NET 8. All seven tetrominoes with rotation,
+            a ghost piece showing where the block will land, a preview of the next
+            piece, hard and soft drop, and increasing speed as your score grows.
+          </p>
+          <p>
+            Plus a persistent high score, a flash animation when rows are cleared,
+            background music and sound effects, and start, pause and game-over
+            menus. Cleanly split into game logic, playfield, blocks, sound and
+            high-score management.
+          </p>
+          <ul class="tags">
+            <li>C#</li><li>.NET 8</li><li>WPF / XAML</li><li>OOP</li>
+          </ul>
+
+          <figure class="rtd-figure">
+            <img src="https://raw.githubusercontent.com/Reggynald/Tetris/master/tetris-demo.gif" alt="Tetris – demo of the WPF application" />
+            <figcaption>Short demo of the game</figcaption>
+          </figure>
+
+          <div class="project-links">
+            <a href="https://github.com/Reggynald/Tetris" target="_blank" rel="noopener">Source code on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project: 8-Bit Knight Runner (Godot) -->
+        <div class="project">
+          <h3>8-Bit Knight Runner</h3>
+          <p class="project-role">Personal project · 2026</p>
+          <p>
+            A 2D pixel-art runner built with the Godot Engine. You control a knight
+            who jumps over obstacles – with its own start menu and 8-bit look. My
+            first project with a proper game engine.
+          </p>
+          <ul class="tags">
+            <li>Godot Engine</li><li>GDScript</li><li>Game development</li><li>Pixel Art</li>
+          </ul>
+
+          <figure class="rtd-figure">
+            <img src="bilder/knight-runner-demo.gif" alt="8-Bit Knight Runner – demo of the Godot game" loading="lazy" />
+            <figcaption>Short demo of the game</figcaption>
+          </figure>
+
+          <div class="project-links">
+            <a href="https://github.com/Reggynald/8-Bit-Knight-Runner" target="_blank" rel="noopener">Source code on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project: This website -->
+        <div class="project">
+          <h3>Personal portfolio website</h3>
+          <p class="project-role">Personal project · 2026</p>
+          <p>
+            This website: a multi-page, responsive site with semantic HTML and CSS.
+            It features a reusable layout, a dark mode via CSS variables and a
+            mobile navigation.
+          </p>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>Responsive Design</li><li>JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/reggynald/Portfolio-Redon" target="_blank" rel="noopener">Source code on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project: Task Tracker -->
+        <div class="project">
+          <h3>Task Tracker</h3>
+          <p class="project-role">Personal project · 2026</p>
+          <p>
+            An interactive to-do app in JavaScript: tasks can be added, edited,
+            tracked by status (to do, in progress, done) and deleted. Small
+            animations give it a smoother, more lively feel.
+          </p>
+          <p>
+            There are two versions: a browser version that stores tasks in
+            localStorage, and a command-line version (CLI) with Node.js that keeps
+            everything in a JSON file.
+          </p>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://reggynald.github.io/Task-Tracker/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/reggynald/Task-Tracker" target="_blank" rel="noopener">Source code on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project: Dice games in C# (evolution) -->
+        <div class="project">
+          <h3>Dice games in C# – from a basic build to an extensible version</h3>
+          <p class="project-role">Personal projects · 2026</p>
+          <p>
+            Two console games in C# that build on each other. I started with a
+            simple dice game, then expanded it into a much larger version with
+            power-ups and a cleanly extensible architecture.
+          </p>
+
+          <style>
+            .stage { border-left: 3px solid var(--accent); padding-left: 1rem; margin-top: 1.25rem; }
+            .stage h4 { font-size: 1.05rem; margin: 0 0 0.3rem; font-family: var(--font-head); }
+            .stage-badge {
+              font-size: 0.75rem; color: var(--accent-strong); background: var(--accent-soft);
+              border-radius: 999px; padding: 0.1rem 0.6rem; margin-left: 0.4rem; vertical-align: middle;
+            }
+            .rtd-figure { margin: 1rem 0 0; }
+            .rtd-figure img {
+              width: 100%; max-width: 640px; height: auto;
+              border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+            }
+            .rtd-figure figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+          </style>
+
+          <div class="stage">
+            <h4>1 · Roll the Dice</h4>
+            <p>
+              The starting point: over 10 rounds you roll against the computer –
+              whoever rolls higher wins the round. With ASCII dice, a short
+              animation and an object-oriented structure.
+            </p>
+            <figure class="rtd-figure">
+              <img src="https://raw.githubusercontent.com/Reggynald/Roll-The-Dice/master/rtd-demo.gif" alt="Roll the Dice – demo of the console game" />
+              <figcaption>Demo of the first version</figcaption>
+            </figure>
+            <div class="project-links">
+              <a href="https://github.com/Reggynald/Roll-the-Dice" target="_blank" rel="noopener">Source code on GitHub</a>
+            </div>
+          </div>
+
+          <div class="stage">
+            <h4>2 · Roll the Dice: Race <span class="stage-badge">Evolution</span></h4>
+            <p>
+              The expansion: a race to a target score, two game modes and five
+              power-ups with their own animations. The technical focus was
+              extensibility – the power-ups are based on a shared interface
+              (<code>IPowerUp</code>), so new ones can be added without changing
+              existing code.
+            </p>
+            <figure class="rtd-figure">
+              <img src="https://raw.githubusercontent.com/Reggynald/RollTheDiceRace/master/rtdrace-demo.gif" alt="Roll the Dice: Race – demo of the console game" />
+              <figcaption>Demo of the extended version</figcaption>
+            </figure>
+            <div class="project-links">
+              <a href="https://github.com/Reggynald/RollTheDiceRace" target="_blank" rel="noopener">Source code on GitHub</a>
+            </div>
+          </div>
+
+          <ul class="tags">
+            <li>C#</li><li>.NET</li><li>Console application</li><li>OOP</li><li>Interfaces</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Redon Aliu</p>
+      <nav aria-label="Footer">
+        <a href="index-en.html">Home</a>
+        <a href="projekte-en.html" class="is-active">Projects</a>
+        <a href="kontakt-en.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
