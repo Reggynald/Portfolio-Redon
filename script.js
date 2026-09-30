@@ -43,3 +43,41 @@ if (themeToggle) {
     applyTheme(next);
   });
 }
+
+/* Scroll-Reveal */
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) return;
+
+  var selectors = ".hero-text, .hero-photo, .section-title, .lead, .area, .card, .project, .contact-wrap, main .container > p";
+  var items = document.querySelectorAll(selectors);
+
+  items.forEach(function (el) {
+    el.classList.add("reveal");
+    // Leichte Staffelung nur bei Karten/Bereichen, die in Reihen erscheinen:
+    var delay = 0;
+    if (el.classList.contains("card") || el.classList.contains("area")) {
+      var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) {
+        return c.classList.contains("card") || c.classList.contains("area");
+      });
+      delay = sibs.indexOf(el) * 0.08;
+    }
+    el.style.transitionDelay = delay + "s";
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      } else {
+        entry.target.classList.remove("is-visible");
+      }
+    });
+  }, { threshold: 0, rootMargin: "0px 0px -15% 0px" });
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      items.forEach(function (el) { io.observe(el); });
+    });
+  });
+})();
